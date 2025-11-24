@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from 'react';
+import Image from 'next/image';
 import type { Project } from '@/data/projects';
 
 type ProjectModalProps = {
@@ -37,7 +38,13 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
         </button>
         <div className="modal-body">
           <div className="modal-visual">
-            <img src={project.image} alt={project.title} />
+            <Image
+              src={project.image}
+              alt={project.title}
+              width={1200}
+              height={675}
+              priority
+            />
           </div>
           <div className="modal-content-pane">
             <h3>{project.title}</h3>
