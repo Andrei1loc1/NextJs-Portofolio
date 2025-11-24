@@ -1,1 +1,0 @@
-self.__REACT_LOADABLE_MANIFEST="{\"app\\\\page.tsx -> scrollreveal\":{\"id\":\"app\\\\page.tsx -> scrollreveal\",\"files\":[\"static/chunks/_app-pages-browser_node_modules_scrollreveal_dist_scrollreveal_es_js.js\"]}}"
