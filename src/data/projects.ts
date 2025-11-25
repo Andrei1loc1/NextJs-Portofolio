@@ -39,5 +39,15 @@ export const projects: Project[] = [
     liveUrl: 'https://landing-page-fitmate.vercel.app/',
     repoUrl: 'https://github.com/Andrei1loc1/FitMate',
   },
+  {
+    id: 'playProcessor',
+    title: 'Campaign Play Processor',
+    description:
+      'Campaign Play Processor is a full-stack web app that simulates and processes real-time asynchronous campaign events. It features a Node.js/Express backend for generating and managing event flows and a React + Vite dashboard for live monitoring and visualization. The system is structured to clearly separate event production, processing, and display, making the architecture easy to extend. It also serves as a practical example of handling real-time data in a clean and scalable full-stack setup.',
+    image: '/assets/images/playprocessor.png',
+    logo: '/assets/images/procesLogo.jpg',
+    liveUrl: 'https://github.com/Andrei1loc1/campaign-play-processor',
+    repoUrl: 'https://github.com/Andrei1loc1/campaign-play-processor',
+  },
   
 ];
