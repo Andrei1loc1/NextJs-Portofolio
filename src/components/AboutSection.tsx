@@ -34,9 +34,10 @@ export default function AboutSection() {
               <span style={{ ['--order' as string]: 3 }}>JavaScript</span>
               <span style={{ ['--order' as string]: 4 }}>React</span>
               <span style={{ ['--order' as string]: 5 }}>React Native</span>
-              <span style={{ ['--order' as string]: 5 }}>TypeScript</span>
-              <span style={{ ['--order' as string]: 6 }}>Tailwind CSS</span>
+              <span style={{ ['--order' as string]: 6 }}>TypeScript</span>
+              <span style={{ ['--order' as string]: 7 }}>Tailwind CSS</span>
               <span style={{ ['--order' as string]: 8 }}>Three.js</span>
+              <span style={{ ['--order' as string]: 9 }}>Next.js</span>
             </div>
           </div>
 
@@ -50,8 +51,11 @@ export default function AboutSection() {
               <span style={{ ['--order' as string]: 1 }}>C</span>
               <span style={{ ['--order' as string]: 2 }}>C++</span>
               <span style={{ ['--order' as string]: 3 }}>Python</span>
-              <span style={{ ['--order' as string]: 5 }}>Node.js</span>
+              <span style={{ ['--order' as string]: 4 }}>Node.js</span>
               <span style={{ ['--order' as string]: 5 }}>Java</span>
+              <span style={{ ['--order' as string]: 6 }}>Express.js</span>
+              <span style={{ ['--order' as string]: 7 }}>REST API</span>
+              <span style={{ ['--order' as string]: 8 }}>GraphQL</span>
             </div>
           </div>
 
@@ -65,7 +69,11 @@ export default function AboutSection() {
               <span style={{ ['--order' as string]: 1 }}>MySQL</span>
               <span style={{ ['--order' as string]: 2 }}>AsyncStorage</span>
               <span style={{ ['--order' as string]: 3 }}>Firebase</span>
-              <span style={{ ['--order' as string]: 3 }}>MongoDB</span>
+              <span style={{ ['--order' as string]: 4 }}>MongoDB</span>
+              <span style={{ ['--order' as string]: 5 }}>PostgreSQL</span>
+              <span style={{ ['--order' as string]: 6 }}>SQLite</span>
+              <span style={{ ['--order' as string]: 7 }}>Prisma</span>
+              <span style={{ ['--order' as string]: 8 }}>Supabase</span>
             </div>
           </div>
         </div>

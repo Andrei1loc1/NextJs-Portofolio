@@ -409,7 +409,20 @@ h3 {
 }
 
 .skills-box {
-  margin-left: 20px;
+  /* Eliminăm marja stângă pentru a nu afecta proporțiile coloanelor */
+  margin-left: 0;
+}
+
+/* Timeline skills: trei coloane proporționale */
+.timeline-row {
+  /* păstrăm layout-ul flex moștenit din .row; adăugăm spațiu față de linia verticală */
+  padding-left: 20px;
+}
+
+.timeline-row .skills-box {
+  /* Facem coloanele egale ca lățime indiferent de conținut */
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 .skills-header {
@@ -471,6 +484,9 @@ h3 {
   border-radius: 20px;
   box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
   overflow: visible;
+  /* Add a base border so we can color it on hover without shifting layout */
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
 }
 
 .project-box > i {
@@ -515,18 +531,15 @@ h3 {
   border-radius: 20px;
 }
 
-.project-box:hover.project-box::after,
 .contact-info:hover.contact-info::after {
   bottom: 0;
   opacity: 1;
   background: linear-gradient(135deg, #925bf78c 0%, #d1b7f3be 100%);
 }
 
-.project-box:hover.project-box i,
-.project-box:hover.project-box > h3,
-.project-box:hover.project-box > button {
-  color: var(--color-white);
-  z-index: 2;
+/* Project card: only change border color on hover, keep background intact */
+.project-box:hover {
+  border-color: rgba(152, 32, 232, 0.735);
 }
 
 .project-toggle-btn {

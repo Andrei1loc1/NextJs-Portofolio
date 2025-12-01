@@ -19,6 +19,16 @@ export const projects: Project[] = [
     liveUrl: 'https://ai-resume-analyzer-azure-omega.vercel.app/',
     repoUrl: 'https://github.com/Andrei1loc1/ai-resume-analyzer',
   },
+    {
+        id: 'ai-multi-model',
+        title: 'AI Multi-model',
+        description:
+            'A sophisticated web application built with Next.js that provides a unified interface for interacting with multiple AI language models. Leveraging OpenRouter\'s API, the app enables seamless conversations with various AI models like Grok, Llama, Gemma, Gemini, and DeepSeek, all within a single, intuitive platform designed for productivity, research, and learning.',
+        image: '/assets/images/AI_capture.png',
+        logo: '/assets/images/M_logo.png',
+        liveUrl: 'https://ai-multi-model.vercel.app/',
+        repoUrl: 'https://github.com/Andrei1loc1/ai-multi-model',
+    },
   {
     id: 'weather-app',
     title: 'Weather App',
