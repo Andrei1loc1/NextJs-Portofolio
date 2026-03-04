@@ -64,8 +64,8 @@ export const projects: Project[] = [
     title: 'ThreatMap',
     description:
       'ThreatMap is a real-time cybersecurity monitoring application that transforms raw security logs into an interactive visual experience. It automatically detects brute-force attacks, displays attackers on a 3D globe, and uses AI to assess the severity of each threat — enabling faster, smarter incident response.',
-    image: '/assets/images/playprocessor.png',
-    logo: '/assets/images/procesLogo.jpg',
+    image: '/assets/images/ThreatMap.png',
+    logo: '/assets/images/threat_logo.png',
     liveUrl: 'https://github.com/Andrei1loc1/ThreatMap/tree/main',
     repoUrl: 'https://github.com/Andrei1loc1/ThreatMap/tree/main',
   },
