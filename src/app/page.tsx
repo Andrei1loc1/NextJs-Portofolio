@@ -63,7 +63,7 @@ export default function HomePage() {
       sr.reveal('.featured-text-btn', { delay: 200 });
       sr.reveal('.social_icons', { delay: 200 });
       sr.reveal('.featured-image', { delay: 300 });
-      sr.reveal('.project-box', { interval: 200 });
+      sr.reveal('.project-container', { delay: 200 });
       sr.reveal('.top-header', {});
 
       const srLeft = ScrollReveal.default({

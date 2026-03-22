@@ -10,6 +10,16 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: 'booking-app',
+    title: 'TEMPLATE Fullstack SaaS',
+    description:
+      'This template provides a complete, multi-tenant SaaS foundation for appointment-based businesses. Each client deployment connects to its own dedicated Firebase project, ensuring full data isolation and independent scalability. The codebase is designed to be reusuable and configurable — a single repository powers unlimited branded instances, with all customization centralized in one config file.',
+    image: '/assets/images/booking_capture.png',
+    logo: '/assets/images/booking_logo.png',
+    liveUrl: 'https://booking-salon-template.vercel.app/',
+    repoUrl: 'https://github.com/Andrei1loc1/BOOKING_SALON_TEMPLATE',
+  },
+  {
     id: 'ai-resume-analyzer',
     title: 'AI Resume Analyzer',
     description:
@@ -19,16 +29,16 @@ export const projects: Project[] = [
     liveUrl: 'https://ai-resume-analyzer-azure-omega.vercel.app/',
     repoUrl: 'https://github.com/Andrei1loc1/ai-resume-analyzer',
   },
-    {
-        id: 'ai-multi-model',
-        title: 'AI Multi-model',
-        description:
-            'A sophisticated web application built with Next.js that provides a unified interface for interacting with multiple AI language models. Leveraging OpenRouter\'s API, the app enables seamless conversations with various AI models like Grok, Llama, Gemma, Gemini, and DeepSeek, all within a single, intuitive platform designed for productivity, research, and learning.',
-        image: '/assets/images/AI_capture.png',
-        logo: '/assets/images/M_logo.png',
-        liveUrl: 'https://ai-multi-model.vercel.app/',
-        repoUrl: 'https://github.com/Andrei1loc1/ai-multi-model',
-    },
+  {
+    id: 'ai-multi-model',
+    title: 'AI Multi-model',
+    description:
+      'A sophisticated web application built with Next.js that provides a unified interface for interacting with multiple AI language models. Leveraging OpenRouter\'s API, the app enables seamless conversations with various AI models like Grok, Llama, Gemma, Gemini, and DeepSeek, all within a single, intuitive platform designed for productivity, research, and learning.',
+    image: '/assets/images/AI_capture.png',
+    logo: '/assets/images/M_logo.png',
+    liveUrl: 'https://ai-multi-model.vercel.app/',
+    repoUrl: 'https://github.com/Andrei1loc1/ai-multi-model',
+  },
   {
     id: 'weather-app',
     title: 'Weather App',
@@ -59,7 +69,7 @@ export const projects: Project[] = [
     liveUrl: 'https://github.com/Andrei1loc1/campaign-play-processor',
     repoUrl: 'https://github.com/Andrei1loc1/campaign-play-processor',
   },
-   {
+  {
     id: 'threatMap',
     title: 'ThreatMap',
     description:
@@ -69,5 +79,5 @@ export const projects: Project[] = [
     liveUrl: 'https://github.com/Andrei1loc1/ThreatMap/tree/main',
     repoUrl: 'https://github.com/Andrei1loc1/ThreatMap/tree/main',
   },
-  
+
 ];

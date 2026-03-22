@@ -467,9 +467,29 @@ h3 {
 .project-container {
   display: flex;
   width: 100%;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 20px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 20px;
+  padding-inline: 10px;
+  scroll-behavior: smooth;
+}
+
+.project-container::-webkit-scrollbar {
+  height: 8px;
+}
+.project-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+.project-container::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+.project-container::-webkit-scrollbar-thumb:hover {
+  background: #bbb;
 }
 
 .project-box {
@@ -478,7 +498,9 @@ h3 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 30%;
+  flex: 0 0 auto;
+  width: 350px;
+  max-width: 85vw;
   min-height: 250px;
   background: var(--color-white);
   border-radius: 20px;
@@ -487,6 +509,7 @@ h3 {
   /* Add a base border so we can color it on hover without shifting layout */
   border: 2px solid transparent;
   transition: border-color 0.3s ease;
+  scroll-snap-align: center;
 }
 
 .project-box > i {
@@ -885,7 +908,7 @@ footer {
   }
 
   .project-container {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .project-box {
@@ -922,7 +945,8 @@ footer {
     font-size: 40px;
   }
   .project-box {
-    width: 100%;
+    width: 320px;
+    max-width: 85vw;
   }
   .form-inputs {
     flex-direction: column;
