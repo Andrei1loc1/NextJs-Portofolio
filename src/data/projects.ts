@@ -40,6 +40,16 @@ export const projects: Project[] = [
     repoUrl: 'https://github.com/Andrei1loc1/ai-multi-model',
   },
   {
+    id: 'financial-app',
+    title: 'Financial App',
+    description:
+      'A sophisticated web application built with Next.js that provides a unified interface for interacting with multiple AI language models. Leveraging OpenRouter\'s API, the app enables seamless conversations with various AI models like Grok, Llama, Gemma, Gemini, and DeepSeek, all within a single, intuitive platform designed for productivity, research, and learning.',
+    image: '/assets/images/fa_logo.png',
+    logo: '/assets/images/fafa_logo.png',
+    liveUrl: 'https://ai-multi-model.vercel.app/',
+    repoUrl: 'https://github.com/Andrei1loc1/ai-multi-model',
+  },
+  {
     id: 'weather-app',
     title: 'Weather App',
     description:
