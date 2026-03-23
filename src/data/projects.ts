@@ -46,8 +46,8 @@ export const projects: Project[] = [
       'Modern web application for personal finance management, enabling users to track income and expenses through an interactive dashboard with real-time visualizations. It includes gamification features and financial simulations, while leveraging AI-powered insights to help optimize budgeting and spending habits.',
     image: '/assets/images/logo.png',
     logo: '/assets/images/logo.png',
-    liveUrl: 'https://ai-multi-model.vercel.app/',
-    repoUrl: 'https://github.com/Andrei1loc1/ai-multi-model',
+    liveUrl: 'https://financialapp-gules.vercel.app/',
+    repoUrl: 'https://github.com/Andrei1loc1/financialapp/tree/main',
   },
   {
     id: 'weather-app',
