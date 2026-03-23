@@ -43,7 +43,7 @@ export const projects: Project[] = [
     id: 'financial-app',
     title: 'Financial App',
     description:
-      'A sophisticated web application built with Next.js that provides a unified interface for interacting with multiple AI language models. Leveraging OpenRouter\'s API, the app enables seamless conversations with various AI models like Grok, Llama, Gemma, Gemini, and DeepSeek, all within a single, intuitive platform designed for productivity, research, and learning.',
+      'Modern web application for personal finance management, enabling users to track income and expenses through an interactive dashboard with real-time visualizations. It includes gamification features and financial simulations, while leveraging AI-powered insights to help optimize budgeting and spending habits.',
     image: '/assets/images/logo.png',
     logo: '/assets/images/logo.png',
     liveUrl: 'https://ai-multi-model.vercel.app/',
