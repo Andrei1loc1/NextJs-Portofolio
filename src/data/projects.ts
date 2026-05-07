@@ -10,14 +10,14 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: 'booking-app',
-    title: 'TEMPLATE Fullstack SaaS',
+    id: 'mindspace-studio',
+    title: 'MindSpace Studio',
     description:
-      'This template provides a complete, multi-tenant SaaS foundation for appointment-based businesses. Each client deployment connects to its own dedicated Firebase project, ensuring full data isolation and independent scalability. The codebase is designed to be reusuable and configurable — a single repository powers unlimited branded instances, with all customization centralized in one config file.',
-    image: '/assets/images/booking_capture.png',
-    logo: '/assets/images/booking_logo.png',
-    liveUrl: 'https://booking-salon-template.vercel.app/',
-    repoUrl: 'https://github.com/Andrei1loc1/BOOKING_SALON_TEMPLATE',
+      'Starter premium pentru un website de prezentare al unei companii de arhitectura si design interior. Proiectul foloseste Next.js App Router, React, TypeScript, Tailwind CSS, Three.js, React Three Fiber, Drei si Framer Motion.',
+    image: '/assets/images/mind.png',
+    logo: '/assets/images/logo_mind.png',
+    liveUrl: 'https://arhitecture-design-app.vercel.app/',
+    repoUrl: 'https://github.com/Andrei1loc1/arhitecture-design-app',
   },
   {
     id: 'ai-resume-analyzer',
@@ -38,6 +38,16 @@ export const projects: Project[] = [
     logo: '/assets/images/M_logo.png',
     liveUrl: 'https://ai-multi-model-qj26.vercel.app/',
     repoUrl: 'https://github.com/Andrei1loc1/ai-multi-model',
+  },
+  {
+    id: 'booking-app',
+    title: 'TEMPLATE Fullstack SaaS',
+    description:
+      'This template provides a complete, multi-tenant SaaS foundation for appointment-based businesses. Each client deployment connects to its own dedicated Firebase project, ensuring full data isolation and independent scalability. The codebase is designed to be reusuable and configurable — a single repository powers unlimited branded instances, with all customization centralized in one config file.',
+    image: '/assets/images/booking_capture.png',
+    logo: '/assets/images/booking_logo.png',
+    liveUrl: 'https://booking-salon-template.vercel.app/',
+    repoUrl: 'https://github.com/Andrei1loc1/BOOKING_SALON_TEMPLATE',
   },
   {
     id: 'financial-app',
