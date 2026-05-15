@@ -20,6 +20,16 @@ export const projects: Project[] = [
     repoUrl: 'https://github.com/Andrei1loc1/arhitecture-design-app',
   },
   {
+    id: 'nutri-track-ai-vision',
+    title: 'NutriTrack AI Vision',
+    description:
+      'Resumind is a web application that uses AI to evaluate resumes, highlight strengths and weaknesses, and provide actionable optimization suggestions. Users can upload their resumes and receive a score along with concrete tips to improve their chances with applicant tracking systems (ATS) and recruiters.',
+    image: '/assets/images/nutri_captura.png',
+    logo: '/assets/images/nutri_logo.png',
+    liveUrl: 'https://nutri-track-ai-vision.vercel.app/',
+    repoUrl: 'https://github.com/Andrei1loc1/NutriTrack-AI-Vision',
+  },
+  {
     id: 'ai-resume-analyzer',
     title: 'AI Resume Analyzer',
     description:
