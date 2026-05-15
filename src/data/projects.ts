@@ -64,7 +64,7 @@ export const projects: Project[] = [
     title: 'Financial App',
     description:
       'Modern web application for personal finance management, enabling users to track income and expenses through an interactive dashboard with real-time visualizations. It includes gamification features and financial simulations, while leveraging AI-powered insights to help optimize budgeting and spending habits.',
-    image: '/assets/images/logo.png',
+    image: '/assets/images/financial_captura.png',
     logo: '/assets/images/logo.png',
     liveUrl: 'https://financialapp-gules.vercel.app/',
     repoUrl: 'https://github.com/Andrei1loc1/financialapp/tree/main',
@@ -78,16 +78,6 @@ export const projects: Project[] = [
     logo: '/assets/images/logo_weather.jpg',
     liveUrl: 'https://weather-app-mocha-ten-63.vercel.app/',
     repoUrl: 'https://github.com/Andrei1loc1/WeatherApp/tree/main/frontend',
-  },
-  {
-    id: 'fitmate',
-    title: 'Fitness Tracker App',
-    description:
-      'FitMate is a mobile fitness app designed to help you stay active and healthy by tracking your workouts, daily movement, distance traveled, calories burned, and water intake. It provides a simple, easy-to-use interface that lets you set goals, monitor your progress over time, and maintain a balanced lifestyle.',
-    image: '/assets/images/captura_fitmate.png',
-    logo: '/assets/images/logo_fit.png',
-    liveUrl: 'https://landing-page-fitmate.vercel.app/',
-    repoUrl: 'https://github.com/Andrei1loc1/FitMate',
   },
   {
     id: 'playProcessor',
