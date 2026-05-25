@@ -63,7 +63,7 @@ export default function HomePage() {
       sr.reveal('.featured-text-btn', { delay: 200 });
       sr.reveal('.social_icons', { delay: 200 });
       sr.reveal('.featured-image', { delay: 300 });
-      sr.reveal('.project-container', { delay: 200 });
+      sr.reveal('.project-group', { delay: 100 });
       sr.reveal('.top-header', {});
 
       const srLeft = ScrollReveal.default({
@@ -72,7 +72,8 @@ export default function HomePage() {
         duration: 2000,
         reset: true,
       });
-      srLeft.reveal('.about-info', { delay: 100 });
+      srLeft.reveal('.glass-about-card', { delay: 100 });
+      srLeft.reveal('.about-intro-text', { delay: 50 });
       srLeft.reveal('.contact-info', { delay: 100 });
 
       const srRight = ScrollReveal.default({
@@ -81,42 +82,13 @@ export default function HomePage() {
         duration: 2000,
         reset: true,
       });
-      srRight.reveal('.skills-box', { delay: 100 });
+      srRight.reveal('.glass-skill-card', { delay: 100 });
+      srRight.reveal('.glass-card', { delay: 80 });
       srRight.reveal('.form-control', { delay: 100 });
     });
     return () => {
       isMounted = false;
     };
-  }, []);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const row = document.querySelector('.timeline-row') as HTMLElement | null;
-      const line = row?.querySelector('.timeline-line') as HTMLElement | null;
-      if (!row || !line) return;
-      const rect = row.getBoundingClientRect();
-      const visibleHeight = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
-      const totalHeight = rect.height;
-      const progress = Math.max(0, Math.min(1, visibleHeight / totalHeight));
-
-      if (progress > 0.3) {
-        line.style.animationPlayState = 'running';
-      } else {
-        line.style.animation = 'none';
-        void line.offsetWidth;
-        line.style.animation = 'growLine 2s ease-out forwards';
-        line.style.animationPlayState = 'paused';
-      }
-
-      const skills = row.querySelectorAll('.animated-skills span');
-      skills.forEach((skill) => {
-        (skill as HTMLElement).style.animationPlayState = progress > 0.3 ? 'running' : 'paused';
-      });
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
-    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (

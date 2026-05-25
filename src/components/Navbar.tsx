@@ -38,7 +38,7 @@ export default function Navbar({
     <nav
       id="header"
       style={{
-        boxShadow: scrolled ? '0 1px 6px rgba(0,0,0,0.1)' : 'none',
+        boxShadow: scrolled ? '0 4px 30px rgba(0, 0, 0, 0.08)' : 'none',
         height: scrolled ? '70px' : '90px',
         lineHeight: scrolled ? '70px' : '90px',
       }}
@@ -59,7 +59,6 @@ export default function Navbar({
               >
                 {link.label}
               </a>
-              <div className="circle"></div>
             </li>
           ))}
         </ul>

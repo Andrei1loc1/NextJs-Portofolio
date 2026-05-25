@@ -1,82 +1,101 @@
 export default function AboutSection() {
+  const skillGroups = [
+    {
+      title: 'Frontend',
+      icon: 'uil-brackets-curly',
+      accent: 'var(--accent-featured)',
+      skills: [
+        { name: 'HTML', level: 95 },
+        { name: 'CSS', level: 90 },
+        { name: 'JavaScript', level: 92 },
+        { name: 'React', level: 90 },
+        { name: 'React Native', level: 78 },
+        { name: 'TypeScript', level: 88 },
+        { name: 'Tailwind CSS', level: 85 },
+        { name: 'Three.js', level: 72 },
+        { name: 'Next.js', level: 87 },
+      ],
+    },
+    {
+      title: 'Backend',
+      icon: 'uil-server',
+      accent: 'var(--accent-ai)',
+      skills: [
+        { name: 'C', level: 75 },
+        { name: 'C++', level: 72 },
+        { name: 'Python', level: 85 },
+        { name: 'Node.js', level: 88 },
+        { name: 'Java', level: 80 },
+        { name: 'Express.js', level: 86 },
+        { name: 'REST API', level: 90 },
+        { name: 'GraphQL', level: 70 },
+        { name: 'TensorFlow', level: 78 },
+        { name: 'PyTorch', level: 75 },
+        { name: 'Scikit-learn', level: 82 },
+        { name: 'Pandas', level: 85 },
+        { name: 'NumPy', level: 87 },
+        { name: 'Keras', level: 76 },
+      ],
+    },
+    {
+      title: 'Database',
+      icon: 'uil-database',
+      accent: 'var(--accent-pro)',
+      skills: [
+        { name: 'MySQL', level: 85 },
+        { name: 'Firebase', level: 82 },
+        { name: 'MongoDB', level: 80 },
+        { name: 'PostgreSQL', level: 83 },
+        { name: 'SQLite', level: 78 },
+        { name: 'Prisma', level: 75 },
+        { name: 'Supabase', level: 77 },
+      ],
+    },
+  ];
+
   return (
     <section className="section" id="about">
       <div className="top-header">
         <h1>About Me</h1>
       </div>
-      <div className="row">
-        <div className="col">
-          <div className="about-info">
-            <h3>My introduction</h3>
-            <p>
-              I&apos;m a Frontend and Full Stack Developer passionate about turning ideas into
-              seamless, interactive web experiences. I build responsive and user-friendly
-              applications using HTML, CSS, JavaScript, and modern frameworks like React and React
-              Native. I love crafting clean, maintainable code, intuitive designs, and smooth
-              animations that make apps feel alive. Every project I work on is focused on delivering
-              polished user experiences, scalable solutions, and functionality that feels effortless
-              to use.
-            </p>
-          </div>
-        </div>
-        <div className="row timeline-row">
-          <div className="timeline-line"></div>
 
-          <div className="skills-box">
+      <p className="about-intro-text">
+        Frontend & Full Stack Developer passionate about turning ideas into seamless,
+        interactive web experiences. I build responsive applications using modern frameworks
+        like React and Next.js, crafting clean code, intuitive designs, and smooth animations
+        that make apps feel alive.
+      </p>
+
+      <div className="skills-grid">
+        {skillGroups.map((group, gi) => (
+          <div
+            key={group.title}
+            className="glass-skill-card animated-skills-parent"
+            style={{ '--accent': group.accent } as React.CSSProperties}
+          >
             <div className="skills-header">
-              <h3>
-                <i className="uil uil-brackets-curly"></i> Frontend
-              </h3>
+              <div className="skills-header__icon-wrap">
+                <i className={`uil ${group.icon}`} />
+              </div>
+              <h3>{group.title}</h3>
+
             </div>
             <div className="skills-list animated-skills">
-              <span style={{ ['--order' as string]: 1 }}>HTML</span>
-              <span style={{ ['--order' as string]: 2 }}>CSS</span>
-              <span style={{ ['--order' as string]: 3 }}>JavaScript</span>
-              <span style={{ ['--order' as string]: 4 }}>React</span>
-              <span style={{ ['--order' as string]: 5 }}>React Native</span>
-              <span style={{ ['--order' as string]: 6 }}>TypeScript</span>
-              <span style={{ ['--order' as string]: 7 }}>Tailwind CSS</span>
-              <span style={{ ['--order' as string]: 8 }}>Three.js</span>
-              <span style={{ ['--order' as string]: 9 }}>Next.js</span>
+              {group.skills.map((skill, si) => (
+                <span
+                  key={skill.name}
+                  className="skill-pill"
+                  style={{ '--order': si + 1, '--fill': `${skill.level}%` } as React.CSSProperties}
+                >
+                  <span className="skill-pill__label">{skill.name}</span>
+                  <span className="skill-pill__bar">
+                    <span className="skill-pill__fill" />
+                  </span>
+                </span>
+              ))}
             </div>
           </div>
-
-          <div className="skills-box">
-            <div className="skills-header">
-              <h3>
-                <i className="uil uil-server"></i> Backend
-              </h3>
-            </div>
-            <div className="skills-list animated-skills">
-              <span style={{ ['--order' as string]: 1 }}>C</span>
-              <span style={{ ['--order' as string]: 2 }}>C++</span>
-              <span style={{ ['--order' as string]: 3 }}>Python</span>
-              <span style={{ ['--order' as string]: 4 }}>Node.js</span>
-              <span style={{ ['--order' as string]: 5 }}>Java</span>
-              <span style={{ ['--order' as string]: 6 }}>Express.js</span>
-              <span style={{ ['--order' as string]: 7 }}>REST API</span>
-              <span style={{ ['--order' as string]: 8 }}>GraphQL</span>
-            </div>
-          </div>
-
-          <div className="skills-box">
-            <div className="skills-header">
-              <h3>
-                <i className="uil uil-database"></i> Database
-              </h3>
-            </div>
-            <div className="skills-list animated-skills">
-              <span style={{ ['--order' as string]: 1 }}>MySQL</span>
-              <span style={{ ['--order' as string]: 2 }}>AsyncStorage</span>
-              <span style={{ ['--order' as string]: 3 }}>Firebase</span>
-              <span style={{ ['--order' as string]: 4 }}>MongoDB</span>
-              <span style={{ ['--order' as string]: 5 }}>PostgreSQL</span>
-              <span style={{ ['--order' as string]: 6 }}>SQLite</span>
-              <span style={{ ['--order' as string]: 7 }}>Prisma</span>
-              <span style={{ ['--order' as string]: 8 }}>Supabase</span>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );

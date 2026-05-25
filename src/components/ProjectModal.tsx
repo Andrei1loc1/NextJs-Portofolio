@@ -4,6 +4,12 @@ import { useEffect } from 'react';
 import Image from 'next/image';
 import type { Project } from '@/data/projects';
 
+const categoryBadge: Record<string, { label: string; icon: string }> = {
+  featured: { label: '★ Featured', icon: '★' },
+  ai: { label: '✦ AI & Innovation', icon: '✦' },
+  professional: { label: '⚡ Professional', icon: '⚡' },
+};
+
 type ProjectModalProps = {
   project: Project | null;
   onClose: () => void;
@@ -19,11 +25,20 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
     return () => document.body.classList.remove('modal-open');
   }, [project]);
 
+  useEffect(() => {
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    if (project) window.addEventListener('keydown', handleKey);
+    return () => window.removeEventListener('keydown', handleKey);
+  }, [project, onClose]);
+
   if (!project) return null;
+
+  const badge = categoryBadge[project.category];
 
   return (
     <div
-      id="projectModal"
       className={`modal ${project ? 'open' : ''}`}
       aria-hidden={!project}
       role="dialog"
@@ -32,7 +47,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
         if (e.target === e.currentTarget) onClose();
       }}
     >
-      <div className="modal-content">
+      <div className="modal-content glass-card glass-card--modal">
         <button className="modal-close" aria-label="Close" onClick={onClose}>
           &times;
         </button>
@@ -47,8 +62,18 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             />
           </div>
           <div className="modal-content-pane">
+            {badge && (
+              <span className="glass-card__badge" style={{ position: 'static', marginBottom: '14px' }}>
+                {badge.icon} {badge.label.replace(/^[^\s]+\s/, '')}
+              </span>
+            )}
             <h3>{project.title}</h3>
             <p>{project.description}</p>
+            <div className="glass-card__tags" style={{ justifyContent: 'flex-start', marginBottom: '20px' }}>
+              {project.tags.map(tag => (
+                <span key={tag} className="glass-card__tag">{tag}</span>
+              ))}
+            </div>
             <div className="modal-cta">
               {project.liveUrl && (
                 <a
@@ -58,16 +83,6 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                   rel="noreferrer"
                 >
                   Open Project
-                </a>
-              )}
-              {project.repoUrl && (
-                <a
-                  className="repo-btn large-btn"
-                  href={project.repoUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Repository
                 </a>
               )}
             </div>
