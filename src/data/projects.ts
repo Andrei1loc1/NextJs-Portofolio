@@ -54,7 +54,7 @@ export const projects: Project[] = [
       'A unified AI hub that integrates multiple LLMs through OpenRouter, allowing users to switch between models like Grok, Llama, Gemini, and DeepSeek in a single interface. Designed for high-productivity research and comparative AI analysis with a clean, intuitive UX.',
     image: '/assets/images/AI_capture.png',
     logo: '/assets/images/M_logo.png',
-    liveUrl: 'https://ai-multi-model-qj26.vercel.app/',
+    liveUrl: 'https://ai-multi-model.vercel.app/',
     repoUrl: 'https://github.com/Andrei1loc1/ai-multi-model',
     category: 'ai',
     tags: ['Next.js', 'OpenRouter', 'LLMs', 'TypeScript'],
